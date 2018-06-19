@@ -20,7 +20,7 @@ set :shared_files,  [".env"]
 set :app_name,      "smeg"
 set :user,          "deploy"
 set :deploy_to,     "/home/deploy/smeg_it"
-set :repository,    "git@github.com:Sentia/smeg.git"
+set :repository,    "git@github.com:zgkdzjj/smeg.git"
 set :forward_agent, true
 
 # This task is the environment that is loaded for all remote run commands, such as
