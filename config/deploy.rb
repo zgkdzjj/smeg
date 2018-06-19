@@ -19,7 +19,7 @@ set :shared_files,  [".env"]
 
 set :app_name,      "smeg"
 set :user,          "deploy"
-set :deploy_to,     "/home/deploy/smeg_it"
+set :deploy_to,     "/home/deploy/smeg_app"
 set :repository,    "git@github.com:zgkdzjj/smeg.git"
 set :forward_agent, true
 
