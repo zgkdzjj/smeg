@@ -17,9 +17,10 @@ set :shared_files,  [".env"]
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
+set :servers,     ["47.74.70.59"]
 set :app_name,      "smeg"
 set :user,          "deploy"
-set :deploy_to,     "/home/deploy/smeg_app"
+set :deploy_to,     "/home/deploy/smeg_it"
 set :repository,    "git@github.com:zgkdzjj/smeg.git"
 set :forward_agent, true
 

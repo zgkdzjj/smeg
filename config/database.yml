@@ -9,17 +9,21 @@ default: &default
 development:
   <<: *default
   database: smeg_development
+  
 
 test:
   <<: *default
-  <% if ENV["CI"] %>
-  database: smeg_test_<%= ENV["BUILDKITE_JOB_ID"] %>
-  <% else %>
-  database: smeg_test
-  <% end %>
+ <% if ENV["CI"] %>
+ database: smeg_test_<%= ENV["BUILDKITE_JOB_ID"] %>
+ <% else %>
+ database: smeg_test
+ <% end %>
+ database: smeg_test
+  
 
 production:
   <<: *default
   database: smeg_production
   username: <%= ENV['SMEG_DATABASE_USERNAME'] %>
   password: <%= ENV['SMEG_DATABASE_PASSWORD'] %>
+ 
