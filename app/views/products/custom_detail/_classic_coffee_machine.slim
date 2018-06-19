@@ -1,0 +1,32 @@
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Coffee Bean Capacity
+  td = @product.coffee_bean_capacity
+tr
+  th Pump Pressure
+  td = @product.pump_pressure
+tr
+  th Water Tank Capacity
+  td = @product.water_tank_capacity
+tr
+  th Thermostat
+  td = @product.thermostat
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Programmability
+  td
+    - if !dynamic_list(@product.programmability).nil?
+      ul
+        - dynamic_list(@product.programmability).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cleaning
+  td = @product.cleaning
+tr
+  th Lighting
+  td = @product.lighting

@@ -1,0 +1,60 @@
+.row
+  .col-xs-6
+    = f.input :description_2
+.row
+  .col-xs-6
+    = f.input :device_display
+  .col-xs-6
+    = f.input :capacity_gas_hob, collection: dynamic_list(@product.capacity_gas_hob), label: "Capacity (GAS HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :gas_input
+  .col-xs-6
+    = f.input :safety_gas_hob, collection: dynamic_list(@product.safety_gas_hob), label: "Safety (GAS HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_gas_hob, collection: dynamic_list(@product.supplied_accessories_gas_hob), label: "Supplied Accessories (GAS HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :capacity_electric_hob, collection: dynamic_list(@product.capacity_electric_hob), label: "Capacity (ELECTRIC HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+  .col-xs-6
+    = f.input :safety_electric_hob, collection: dynamic_list(@product.safety_electric_hob), label: "Safety (ELECTRIC HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_electric_hob, collection: dynamic_list(@product.supplied_accessories_electric_hob), label: "Supplied Accessories (ELECTRIC HOB)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+
+.row
+  .col-xs-6
+    = f.input :capacity, collection: dynamic_list(@product.capacity), label: "Capacity (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :total_functions, collection: dynamic_list(@product.total_functions), label: "Total Functions", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :door_glass
+  .col-xs-6
+    = f.input :cooking_levels
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_main_oven, collection: dynamic_list(@product.supplied_accessories_main_oven), label: "Supplied Accessories (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :thermostat
+.row
+  .col-xs-6
+    = f.input :installation
+  .col-xs-6
+    = f.input :programmability, collection: dynamic_list(@product.programmability), label: "Programmability", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :cleaning
+  .col-xs-6
+    = f.input :lighting
+.row
+  .col-xs-6
+    = f.input :function_list, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { class: 'form-control multi-select2' }, input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }

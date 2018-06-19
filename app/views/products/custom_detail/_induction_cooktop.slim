@@ -1,0 +1,32 @@
+tr
+  th Capacity
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Power Levels
+  td = @product.power_levels
+tr
+  th Timers
+  td = @product.timers
+tr
+  th Size
+  td = @product.size
+tr
+  th Controls
+  td = @product.controls
+
+tr
+  th Cutout
+  td
+    - if !dynamic_list(@product.cutout).nil?
+      ul
+        - dynamic_list(@product.cutout).each do |accessory|
+          li
+            =< "#{accessory}"

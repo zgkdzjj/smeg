@@ -1,0 +1,266 @@
+en:
+  options:
+    product_types:
+      CeramicElectricCooktop:         'Ceramic Electric Cooktop'
+      ClassicCoffeeMachine:           'Classic Coffee Machine'
+      ClassicCompact:                 'Classic Compact'
+      ClassicDoubleOven:              'Classic Double Oven'
+      ClassicOven70:                  'Classic Oven 70cm'
+      ClassicOven76:                  'Classic Oven 76cm'
+      ClassicOven90:                  'Classic Oven 90cm'
+      ClassicOvenMidrange:            'Classic Oven Midrange'
+      Dishwasher:                     'Dishwasher'
+      DominoCooktop:                  'Domino Cooktop'
+      FabRefrigeration:               'Fab Refrigeration'
+      FreestandingCooker70:           'Freestanding Cooker 70cm'
+      FreestandingCooker90:           'Freestanding Cooker 90cm'
+      FreestandingCooker150:          'Freestanding Cooker 150cm'
+      FrenchDoorRefrigeration:        'French Door Refrigeration'
+      GasCooktop:                     'Gas Cooktop'
+      InductionCooktop:               'Induction Cooktop'
+      WashingMachine:                 'Washing Machine'
+      Dryer:                          'Dryer'
+      LinearCompact:                  'Linear Compact'
+      LinearOven:                     'Linear Oven'
+      LinearRangehood:                'Linear Rangehood'
+      Microwave:                      'Microwave'
+      UndermountRangehood:            'Undermount Rangehood'
+      VictoriaCompact:                'Victoria Compact'
+      VictoriaDoubleOven:             'Victoria Double Oven'
+      VictoriaFreestandingCooker90:   'Victoria Freestanding Cooker 90cm'
+      VictoriaFreestandingCooker93:   'Victoria Freestanding Cooker 93cm'
+      VictoriaFreestandingCooker110:  'Victoria Freestanding Cooker 110cm'
+      VictoriaOven:                   'Victoria Oven'
+      VictoriaRangehood:              'Victoria Rangehood'
+      PortofinoRangehood:             'Portofino Rangehood'
+      WallmountRangehood:             'Wallmount Rangehood'
+      WarmingDrawer:                  'Warming Drawer'
+      PortofinoFreestandingCooker90:  'Portofino Freestanding Cooker 90cm'
+      FreestandingCooker120:          'Freestanding Cooker 120cm'
+      GasInductionDominoCooktop:      'Gas Induction Domino Cooktop'
+
+
+  products:
+    paper_trail:
+      ean:                             'EAN'
+      price:                           'Price'
+      description:                     'Description'
+      aesthetic:                       'Aesthetic'
+      feature_list:                    'Feature List'
+      dimensions:                      'Dimensions'
+      supplied_accessories:            'Supplied Accessories'
+      finish:                          'Finish'
+      safety:                          'Safety'
+      power:                           'Power'
+      notes:                           'Notes'
+      warranty:                        'Warranty'
+      status:                          'Status'
+      optional_accessories:            'Optional Accessories'
+      function_list:                   'Functions List'
+      device_display:                  'Device Display'
+      coffee_bean_capacity:            'Coffee Bean Capacity'
+      pump_pressure:                   'Pump Pressure'
+      water_tank_capacity:             'Water Tank Capacity'
+      thermostat:                      'Thermostat'
+      installation:                    'Installation'
+      programmability:                 'Programmability'
+      cleaning:                        'Cleaning'
+      lighting:                        'Lighting'
+      total_functions:                 'Total Functions'
+      capacity:                        'Capacity'
+      auto_menus:                      'Auto Menus'
+      cooking_levels:                  'Cookin Levels'
+      microwave_power:                 'Microwave Power'
+      aux_oven:                        'Aux Oven'
+      programs_list:                   'Programs List'
+      size:                            'Size'
+      end_of_cycle_indicator:          'End of Cycle Indicator'
+      baskets:                         'Baskets'
+      wash_system:                     'Wash System'
+      water_softener:                  'Water Softener'
+      temperatures:                    'Temperatures'
+      water_connection:                'Water Connection'
+      timer:                           'Timer'
+      filtration:                      'Filtration'
+      drying:                          'Drying'
+      noise:                           'Noise'
+      energy_usage:                    'Energy Usage'
+      energy_rating:                   'Energy Rating'
+      water_usage:                     'Water Usage'
+      water_rating:                    'Water Rating'
+      quick_programs_list:             'Quick Programs List'
+      temperature_control:             'Temperature Control'
+      gas_connection:                  'Gas Connection'
+      cutout:                          'Cutout'
+      gross_capacity:                  'Gross Capacity'
+      shelves_main_compartment:        'Shelves (Main Compartment)'
+      drawers_main_compartment:        'Drawers (Main Compartment)'
+      lighting_main_compartment:       'Lighting (Main Compartment)'
+      shelves_inner_door:              'Shelves (Inner Door)'
+      accessories_inner_door:          'Accessories (Inner Door)'
+      shelves_freezer:                 'Shelves (Freezer)'
+      drawers_freezer:                 'Drawers (Freezer)'
+      accessories_freezer:             'Accessories (Freezer)'
+      defrost:                         'Defrost'
+      performance:                     'Performance'
+      energy_consumption:              'Energy Consumption'
+      star_rating:                     'Star Rating'
+      description_2:                   'Description (Extended)'
+      hob:                             'HOB'
+      main_oven_left:                  'Main Oven (Left)'
+      aux_oven_right:                  'Aux Oven (Right)'
+      capacity_oven_left:              'Capacity (Oven Left)'
+      capacity_oven_right:             'Capacity (Oven Right)'
+      barbecue:                        'Barbecue'
+      gas_input:                       'Gas Input'
+      total_functions_oven_left:       'Total Functions (Oven Left)'
+      total_functions_oven_right:      'Total Functions (Oven Right)'
+      cooking_levels_oven_left:        'Cooking Levels (Oven Left)'
+      cooking_levels_oven_right:       'Cooking Levels (Oven Right)'
+      thermostat_oven_left:            'Thermostat (Oven Left)'
+      thermostat_oven_right:           'Thermostat (Oven Right)'
+      programmability_oven_left:       'Programmability (Oven Left)'
+      programmability_oven_right:      'Programmability (Oven Right)'
+      cleaning_oven_left:              'Cleaning (Oven Left)'
+      cleaning_oven_right:             'Cleaning (Oven Right)'
+      lighting_oven_left:              'Lighting (Oven Left)'
+      lighting_oven_right:             'Lighting (Oven Right)'
+      safety_oven_left:                'Safety (Oven Left)'
+      safety_oven_right:               'Safety (Oven Right)'
+      supplied_accessories_oven_left:  'Supplied Accessories (Oven Left)'
+      supplied_accessories_oven_right: 'Supplied Accessories (Oven Right)'
+      supplied_accessories_main_oven:  'Supplied Accessories (Main Oven)'
+      door_glass:                      'Door Glass'
+      electric_hob:                    'Electric HOB'
+      gas_hob:                         'Gas HOB'
+      door_shelves_main_compartment:   'Door Shelves (Main Compartment)'
+      accessories_main_compartment:    'Accessories (Main Compartment)'
+      door_shelves_freezer:            'Door Shelves (Freezer)'
+      weight:                          'Weight'
+      ignition:                        'Ignition'
+      drum_construction:               'Drum Construction'
+      door:                            'Door'
+      auxiliary_list:                  'Auxiliary List'
+      spin_speed:                      'Spin Speed'
+      electrical_input:                'Electrical Input'
+      total_current:                   'Total Current'
+      motor:                           'Motor'
+      max_airflow:                     'Max Airflow'
+      noise_rating:                    'Noise Rating'
+      illumination:                    'Illumination'
+      speeds:                          'Speeds'
+      delay_stop:                      'Delay Stop'
+      ducting_options:                 'Duction Options'
+      cavity_type:                     'Cavity Type'
+      turntable:                       'Turntable'
+      power_levels:                    'Power Levels'
+      grill_power:                     'Grill Power'
+      convection_power:                'Convection Power'
+      auto_cook_functions:             'Auto Cook Functions'
+      control_panel:                   'Control Panel'
+      clock:                           'Clock'
+      top_right_main_oven:             'Main Oven (Top Right)'
+      aux_oven_left:                   'Aux Oven (Left)'
+      capacity_main_oven:              'Capacity (Main Oven)'
+      total_functions_main_oven:       'Total Functions (Main Oven)'
+      door_main_oven:                  'Door (Main Oven)'
+      door_oven_left:                  'Door (Oven Left)'
+      door_glass_main_oven:            'Door Glass (Main Oven)'
+      cooking_levels_main_oven:        'Cooking Levels (Main Oven)'
+      thermostat_main_oven:            'Thermostat (Main Oven)'
+      programmability_main_oven:       'Programmability (Main Oven)'
+      cleaning_main_oven:              'Cleaning (Main Oven)'
+      lighting_main_oven:              'Lighting (Main Oven)'
+      capacity_grill:                  'Capacity (Grill)'
+      total_functions_grill:           'Total Functions (Grill)'
+      cooking_levels_grill:            'Cooking Levels (Grill)'
+      thermostat_grill:                'Thermostat (Grill)'
+      programmability_grill:           'Programmability (Grill)'
+      cleaning_grill:                  'Cleaning (Grill)'
+      lighting_grill:                  'Lighting (Grill)'
+      safety_grill:                    'Safety (Grill)'
+      supplied_accessories_grill:      'Supplied Accessories (Grill)'
+      installation_cooker:             'Installation (Cooker)'
+      capacity_cooker:                 'Capacity (Cooker)'
+      safety_cooker:                   'Safety (Cooker)'
+      supplied_accessories_cooker:     'Supplied Accessories (Cooker)'
+      lower_left_main_oven:            'Main Oven (Lower Left)'
+      door_oven_right:                 'Door (Oven Right)'
+      grill:                           'Grill'
+      fascia:                          'Fascia'
+      temperature:                     'Temperature'
+
+      pyrolytic_cleaning:                 "Pyrolytic Cleaning"
+      eco_pyrolytic:                      "Eco Pyrolytic"
+      pyrolytic:                          "Pyrolytic"
+      static_grill:                       "Static Grill"
+      convection:                         "Convection"
+      fan_forced:                         "Fan Force"
+      fan_grill:                          "Fan Grill"
+      fan_assisted:                       "Fan Assisted"
+      bakers_function:                    "Bakers Function"
+      supercook:                          "Supercook"
+      eco:                                "Eco"
+      microwave:                          "Microwave"
+      microwave_grill:                    "Microwave and Grill"
+      microwave_fan_forced:               "Microwave and Fan Forced"
+      microwave_static_fan:               "Microwave and Static and Fan"
+      vapour_clean:                       "Vapour Clean"
+      defrost_by_time:                    "Defrost By Time"
+      defrost_by_weight:                  "Defrost By Weight"
+      proving:                            "Proving"
+      sabbath_mode:                       "Sabbath Mode"
+      keep_warm:                          "Keep Warm"
+      reheat:                             "Reheat"
+      steam:                              "Steam"
+      base_heat:                          "Base Heat"
+      bakers_microwave:                   "Bakers Microwave"
+      fan_forced_grill:                   "Fan Forced and Grill"
+      half_grill:                         "Half Grill"
+      super_fan_force:                    "Super Fan Force"
+      fan_forced_steam:                   "Fan Forced and Steam"
+      fan_assisted_gas:                   "Fan Forced and Gas"
+      rotisserie:                         "Rotisserie"
+      grill_element:                      "Grill Element"
+      rotisserie_full:                    "Rotisserie (full)"
+      half_static_grill:                  "Half Static Grill"
+      pizza:                              "Pizza"
+      quicktime:                          "Quicktime"
+      flexizone:                          "Flexizone"
+      delay:                              "Delay"
+      flexitab:                           "Flexitab"
+      enersave:                           "Enersave"
+      aquatest:                           "Aquatest"
+      orbital_system:                     "Orbital System"
+      eco_fan_forced:                     "Eco Fan Forced"
+      meat:                               "Meat"
+      vegetables:                         "Vegetables"
+      pasta:                              "Pasta"
+      cake:                               "Cake"
+      potato:                             "Potato"
+      fish:                               "Fish"
+      beverage:                           "Beverage"
+      popcorn:                            "Popcorn"
+      chicken:                            "Chicken"
+      frozen_pizza:                       "Frozen Pizza"
+      frozen_vegetables:                  "Frozen Vegetables"
+      fresh_vegetables:                   "Fresh Vegetables"
+      dish_warmer:                        "Dish Warmer"
+      cake_bread:                         "Cake / Bread"
+      fresh_pizaa:                        "Fresh Pizza"
+      fresh_gratin:                       "Fresh Gratin"
+      frozen_gratin:                      "Frozen Gratin"
+      combination:                        "Combination"
+      defrost_proofing_dehydrate_warming: "Defrost Proofing Dehydrate Warming"
+      fully_automatic_coffee_preparation: "Fully Automatic Coffee Preparation"
+      automatic_cappuccino_maker:         "Automatic Cappuccino Maker"
+      ground_coffee_option:               "Ground Coffee Option"
+      hot_water_function:                 "Hot Water Function"
+      rinsing_function:                   "Rinsing Function"
+      steam_function:                     "Steam Function"
+      automatic_milk_frother:             "Automatic Milk Frother"
+      prewash:                            "Prewash"
+      quick_rinse:                        "Quick Rinse"
+      extra_rinse:                        "Extra Rinse"
+      memory:                             "Memory"
+      dryness_adjustment_level:           "Dryness Adjustment Level"

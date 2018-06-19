@@ -1,0 +1,145 @@
+.container
+  h3 Product #{@product.model_number}
+  = I18n.t @product.type, scope: [:options, :product_types]
+
+  .btn-group.pull-right
+    = link_to edit_product_path(@product), class: 'btn btn-default btn-xs' do
+      i.fa.fa-pencil
+
+    = link_to history_product_path(@product), class: 'btn btn-default btn-xs btn-history' do
+      i.fa.fa-folder
+
+    a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" class='btn btn-default btn-xs'
+      i.fa.fa-file-o
+      |&nbsp;PDFS&nbsp;
+      span.caret
+    ul.dropdown-menu
+      li
+        = link_to 'Specifications Sheet', product_path(@product, format: 'pdf', pdf: 'specifications'), target: '_blank'
+      li
+        = link_to 'Silent Salesman', product_path(@product, format: 'pdf', pdf: 'silent-salesmen'), target: '_blank'
+
+  br
+  br
+  br
+
+  = image_tag @product.cover_image.thumb
+
+  br
+  br
+
+  h3 Basic Details
+  table.table
+    tr
+      th Price
+      td = number_to_currency(@product.price)
+    tr
+      th Description
+      td = @product.description
+    tr
+      th Finish
+      td
+        - if !dynamic_list(@product.finish).nil?
+          ul
+            - dynamic_list(@product.finish).each do |accessory|
+              li
+                =< "#{accessory}"
+    tr
+      th Aesthetic
+      td = @product.aesthetic
+    tr
+      th Safety
+      td
+        - if !dynamic_list(@product.safety).nil?
+          ul
+            - dynamic_list(@product.safety).each do |accessory|
+              li
+                =< "#{accessory}"
+
+    tr
+      th Dimensions
+      td = @product.dimensions
+
+    - if @product.try(:function_list).present?
+      tr
+        th Function List
+        td
+          ul
+            - @product.function_list.reject { |x| x.empty? }.each do |function|
+              li
+                => image_tag(function_icon(function))
+                =< I18n.t("options.function_list.#{function}")
+
+    tr
+      th Supplied Accessories
+      td
+        - if !supplied_accessories(@product).nil?
+          ul
+            - supplied_accessories(@product).each do |accessory|
+              li
+                =< "#{accessory}"
+
+    tr
+      th Optional Accessories
+      td
+        - if !supplied_accessories(@product).nil?
+          ul
+            - optional_accessories(@product).each do |accessory|
+              li
+                =< "#{accessory}"
+
+    tr
+      th Notes
+      td = @product.notes
+
+  h3 Features
+  table.table
+    tr
+      th Name
+      th Description
+    - @product.features.each do |feature|
+      tr
+        td = feature.name
+        td = feature.try(:long_description)
+
+  h3 Custom Details
+  table.table
+    = render "products/custom_detail/#{@product.type.underscore}", product: @product
+
+  hr
+  h3 Schematic Images
+  .row
+    - if @product.schematic_attachments.any?
+      - @product.schematic_attachments.each do |image|
+        .col-xs-3
+          = image_tag image.attachment.thumb
+    - else
+      .col-xs-12
+        p = "No Schematics Uploaded."
+
+  hr
+  h3 Product Images
+  .row
+    - if @product.image_attachments.any?
+      - @product.image_attachments.each do |image|
+        .col-xs-3
+          = image_tag image.attachment.thumb
+    - else
+      .col-xs-12
+        p = "No Images Uploaded."
+
+  hr
+  h3 Documents
+  .row
+    .col-xs-12
+      - if @product.file_attachments.any?
+        ul
+          - @product.file_attachments.each do |file|
+            li = link_to "#{file.attachment.file.filename}", file.attachment.url, target: '_blank'
+      - else
+        p = "No Documents Uploaded."
+
+br
+br
+
+#modal-container

@@ -1,0 +1,20 @@
+.row
+  .col-xs-6
+    = f.input :installation
+  .col-xs-6
+    = f.input :motor
+.row
+  .col-xs-6
+    = f.input :max_airflow
+  .col-xs-6
+    = f.input :noise_rating
+.row
+  .col-xs-6
+    = f.input :illumination
+  .col-xs-6
+    = f.input :speeds
+.row
+  .col-xs-6
+    = f.input :delay_stop
+  .col-xs-6
+    = f.input :ducting_options, collection: dynamic_list(@product.ducting_options), label: "Ducting Options", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }

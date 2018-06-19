@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+echo "--- installing any missing gems"
+bundle install
+
+echo "--- installing any missing NPM packages"
+yarn install
+
+echo "--- Starting Webpack dev server, then Rails server"
+foreman start -f Procfile.dev

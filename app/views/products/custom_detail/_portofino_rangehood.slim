@@ -1,0 +1,30 @@
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Motor
+  td = @product.motor
+tr
+  th Max Airflow
+  td = @product.max_airflow
+tr
+  th Noise Rating
+  td = @product.noise_rating
+tr
+  th Illumination
+  td = @product.illumination
+tr
+  th Speeds
+  td = @product.speeds
+
+tr
+  th Delay Stop
+  td = @product.delay_stop
+tr
+  th Ducting Options
+  td
+    - if !dynamic_list(@product.ducting_options).nil?
+      ul
+        - dynamic_list(@product.ducting_options).each do |accessory|
+          li
+            =< "#{accessory}"

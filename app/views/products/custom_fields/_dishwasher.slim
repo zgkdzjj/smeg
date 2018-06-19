@@ -1,0 +1,62 @@
+.row
+  .col-xs-6
+    = f.input :device_display
+  .col-xs-6
+    = f.input :function_list, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :programs_list, collection: Options::Programs::Types.select_form, label: "Choose Programs", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+  .col-xs-6
+    = f.input :quick_programs_list, collection: Options::QuickPrograms::Types.select_form, label: "Choose Quick Programs", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :capacity, collection: dynamic_list(@product.capacity), label: "Capacity", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :size
+
+.row
+  .col-xs-6
+    = f.input :style, label: "Type"
+  .col-xs-6
+    = f.input :total_programs, label: "Programs"
+.row
+  .col-xs-6
+    = f.input :end_of_cycle_indicator
+  .col-xs-6
+    = f.input :baskets
+
+.row
+  .col-xs-6
+    = f.input :wash_system, collection: dynamic_list(@product.wash_system), label: "Wash System", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :water_softener
+.row
+  .col-xs-6
+    = f.input :temperatures
+  .col-xs-6
+    = f.input :feature_list, collection: dynamic_list(@product.feature_list), label: "Feature List", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :water_connection
+  .col-xs-6
+    = f.input :timer
+.row
+  .col-xs-6
+    = f.input :filtration
+  .col-xs-6
+    = f.input :drying
+.row
+  .col-xs-6
+    = f.input :noise
+  .col-xs-6
+    = f.input :energy_usage
+.row
+  .col-xs-6
+    = f.input :energy_rating
+  .col-xs-6
+    = f.input :water_usage
+.row
+  .col-xs-6
+    = f.input :water_rating
+
+

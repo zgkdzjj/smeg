@@ -1,0 +1,63 @@
+.row
+  .col-xs-6
+    = f.input :installation
+  .col-xs-6
+    = f.input :auto_menus
+.row
+  .col-xs-6
+    = f.input :device_display
+
+.row
+  .col-xs-6
+    = f.input :capacity_main_oven, collection: dynamic_list(@product.capacity_main_oven), label: "Capacity (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :total_functions_main_oven, label: "Total Functions (Main Oven)"
+.row
+  .col-xs-6
+    = f.input :door_glass_main_oven, label: "Door Glass (Main Oven)"
+  .col-xs-6
+    = f.input :cooking_levels_main_oven, label: "Cooking Levels (Main Oven)"
+.row
+  .col-xs-6
+    = f.input :thermostat_main_oven, label: "Thermostat (Main Oven)"
+  .col-xs-6
+    = f.input :supplied_accessories_main_oven, label: "Supplied Accessories (Main Oven)"
+.row
+  .col-xs-6
+    = f.input :programmability_main_oven, collection: dynamic_list(@product.programmability_main_oven), label: "Programmability (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :cleaning_main_oven, label: "Cleaing (Main Oven)"
+  .col-xs-6
+    = f.input :lighting_main_oven, label: "Lighting (Main Oven)"
+
+.row
+  .col-xs-6
+    = f.input :capacity_aux_oven, collection: dynamic_list(@product.capacity_aux_oven), label: "Capacity (Aux Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :total_functions_aux_oven, label: "Total Functions (Aux Oven)"
+.row
+  .col-xs-6
+    = f.input :door_glass_aux_oven, label: "Door Glass (Aux Oven)"
+  .col-xs-6
+    = f.input :cooking_levels_aux_oven, label: "Cooking Levels (Aux Oven)"
+.row
+  .col-xs-6
+    = f.input :thermostat_aux_oven, label: "Thermostat (Aux Oven)"
+  .col-xs-6
+    = f.input :supplied_accessories_aux_oven, label: "Supplied Accessories (Aux Oven)"
+.row
+  .col-xs-6
+    = f.input :programmability_aux_oven, collection: dynamic_list(@product.programmability_aux_oven), label: "Programmability (Aux Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :cleaning_aux_oven, label: "Cleaing (Aux Oven)"
+  .col-xs-6
+    = f.input :lighting_aux_oven, label: "Lighting (Aux Oven)"
+
+.row
+  .col-xs-6
+    = f.input :function_list_main_oven, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }, label: "Function List (Main Oven)"
+  .col-xs-6
+    = f.input :function_list_aux_oven, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }, label: "Function List (Aux Oven)"
+

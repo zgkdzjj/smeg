@@ -1,0 +1,27 @@
+#product-history-modal.modal.fade aria-labelledby="product-historyLabel" role="dialog" tabindex="-1" data={product_id: product.id, user_id: current_user.id}
+  .modal-dialog.modal-lg role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        h4#product-historyLabel.modal-title Product History
+      .modal-body
+        - if product.history.present?
+          table.table
+            thead
+              tr
+                th Date/Time
+                th Username
+                th Type
+                th Comment
+            tbody
+              - product.history.each do |history_item|
+                tr
+                  td = history_item[:date]&.try(:to_s, :date_and_time)
+                  td = history_item[:whodunnit]&.name
+                  td = history_item[:item_type]
+                  td = history_item[:text].html_safe
+
+        - else
+          p
+            b No Product History available.

@@ -1,0 +1,4 @@
+- if notice.present?
+  #flash.hidden data-type="#{notice.present? ? 'info' : 'info'}" data-message="#{sanitize notice}"
+- elsif alert.present?
+  #flash.hidden data-type="#{alert.present? ? 'info' : 'danger'}" data-message="#{sanitize alert}"

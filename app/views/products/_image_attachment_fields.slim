@@ -1,0 +1,16 @@
+.nested-fields.image-item
+  - if f.object.present?
+    .remove-attachment
+      = link_to_remove_association f, class: 'btn btn-xs btn-danger pull-right' do
+        .fa.fa-times
+  .clearfix
+  hr
+
+  - if f.object.attachment.present?
+    .image-container
+      = image_tag f.object.attachment.url
+
+  - else
+    = f.input :attachment, as: :file
+    = f.input :attachment_cache, as: :hidden
+

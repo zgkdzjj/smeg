@@ -1,0 +1,155 @@
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Gas HOB
+  td = @product.gas_hob
+tr
+  th Capacity
+  td = @product.capacity
+tr
+  th Gas Input
+  td = @product.gas_input
+tr
+  th Safety
+  td = @product.safety
+tr
+  th Supplied Accessories
+  td
+    - if !dynamic_list(@product.supplied_accessories).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories).each do |accessory|
+          li
+            =< "#{accessory}"
+
+
+tr
+  th Main Oven (top right)
+  td = @product.top_right_main_oven
+  th Aux Oven (left)
+  td = @product.aux_oven_left
+
+tr
+  th Capacity
+  td = @product.capacity_main_oven
+  th Capacity
+  td = @product.capacity_oven_left
+
+tr
+  th Total Functions
+  td = @product.total_functions_main_oven
+  th Total Functions
+  td = @product.total_functions_oven_left
+
+tr
+  th Door
+  td = @product.door_main_oven
+  th Door
+  td = @product.door_oven_left
+
+tr
+  th Door Glass
+  td = @product.door_glass_main_oven
+tr
+  th Cooking Levels
+  td = @product.cooking_levels_main_oven
+  th Cooking Levels
+  td = @product.cooking_levels_oven_left
+tr
+  th Thermostat
+  td = @product.thermostat_main_oven
+  th Thermostat
+  td = @product.thermostat_oven_left
+tr
+  th Programmability (Main Oven)
+  td
+    - if !dynamic_list(@product.programmability_main_oven).nil?
+      ul
+        - dynamic_list(@product.programmability_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Programmability (Oven Left)
+  td
+  - if !dynamic_list(@product.programmability_oven_left).nil?
+    ul
+      - dynamic_list(@product.programmability_oven_left).each do |accessory|
+        li
+          =< "#{accessory}"
+tr
+  th Cleaning
+  td = @product.cleaning_main_oven
+  th Cleaning
+  td = @product.cleaning_oven_left
+tr
+  th Lighting
+  td = @product.lighting_main_oven
+  th Lighting
+  td = @product.lighting_oven_left
+tr
+  th
+  td
+  th Safety
+  td = @product.safety_oven_left
+tr
+  th Supplied Accessories (Main Oven)
+  td
+    - if !dynamic_list(@product.supplied_accessories_main_oven).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Supplied Accessories (Oven Left)
+  td
+    - if !dynamic_list(@product.supplied_accessories_oven_left).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_oven_left).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Grill
+  td = @product.grill
+tr
+  th Capacity (grill)
+  td = @product.capacity_grill
+tr
+  th Total Function (grill)
+  td = @product.total_functions_grill
+tr
+  th Cooking Levels (grill)
+  td = @product.cooking_levels_grill
+tr
+  th Thermostat (grill)
+  td = @product.thermostat_grill
+tr
+  th Programmability (grill)
+  td
+    - if !dynamic_list(@product.programmability_grill).nil?
+      ul
+        - dynamic_list(@product.programmability_grill).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cleaning (grill)
+  td = @product.cleaning_grill
+tr
+  th Lighting (grill)
+  td = @product.lighting_grill
+tr
+  th Safety (grill)
+  td = @product.safety_grill
+tr
+  th Supplied Accessories (Grill)
+  td
+    - if !dynamic_list(@product.supplied_accessories_grill).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_grill).each do |accessory|
+          li
+            =< "#{accessory}"

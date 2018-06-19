@@ -1,0 +1,10 @@
+/* You can continue to include Gemfied CSS here */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* OR import the custom bootstrap module (all Bootstrap no glyphicons) */
+@import "../colors.json";
+
+@import "global";
+@import "components/*";
+@import "products/*";

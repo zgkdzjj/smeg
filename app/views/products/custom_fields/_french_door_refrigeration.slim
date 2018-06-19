@@ -1,0 +1,43 @@
+.row
+  .col-xs-6
+    = f.input :gross_capacity, collection: dynamic_list(@product.gross_capacity), label: "Gross Capacity", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :shelves_main_compartment, collection: dynamic_list(@product.shelves_main_compartment), label: "Shelves (Main Compartment)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :drawers_main_compartment, collection: dynamic_list(@product.drawers_main_compartment), label: "Drawers (Main Compartment)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :lighting_main_compartment
+
+.row
+  .col-xs-6
+    = f.input :door_shelves_main_compartment, collection: dynamic_list(@product.door_shelves_main_compartment), label: "Door Shelves (Main Compartment)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :accessories_main_compartment, collection: dynamic_list(@product.accessories_main_compartment), label: "Accessories (Main Compartment)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :shelves_freezer, collection: dynamic_list(@product.shelves_freezer), label: "Shelves (Freezer)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :drawers_freezer, collection: dynamic_list(@product.drawers_freezer), label: "Drawers (Freezer)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :door_shelves_freezer, collection: dynamic_list(@product.door_shelves_freezer), label: "Door Shelves (Freezer)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :defrost
+.row
+  .col-xs-6
+    = f.input :feature_list, collection: dynamic_list(@product.feature_list), label: "Feature List", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :performance
+.row
+  .col-xs-6
+    = f.input :energy_consumption
+  .col-xs-6
+    = f.input :star_rating
+.row
+  .col-xs-6
+    = f.input :noise
+  .col-xs-6
+    = f.input :weight

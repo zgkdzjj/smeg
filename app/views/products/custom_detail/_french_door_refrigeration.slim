@@ -1,0 +1,102 @@
+tr
+  th Gross Capacity
+  td
+    - if !dynamic_list(@product.gross_capacity).nil?
+      ul
+        - dynamic_list(@product.gross_capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Shelves (Main Compartment)
+  td
+    - if !dynamic_list(@product.shelves_main_compartment).nil?
+      ul
+        - dynamic_list(@product.shelves_main_compartment).each do |accessory|
+          li
+            =< "#{accessory}"
+
+
+tr
+  th Drawers (Main Compartment)
+  td
+    - if !dynamic_list(@product.drawers_main_compartment).nil?
+      ul
+        - dynamic_list(@product.drawers_main_compartment).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Lighting Main Compartment
+  td = @product.lighting_main_compartment
+
+tr
+  th Door Shelves (Main Compartment)
+  td
+    - if !dynamic_list(@product.door_shelves_main_compartment).nil?
+      ul
+        - dynamic_list(@product.door_shelves_main_compartment).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Accessories (Main Compartment)
+  td
+    - if !dynamic_list(@product.accessories_main_compartment).nil?
+      ul
+        - dynamic_list(@product.accessories_main_compartment).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Shelves (Freezer)
+  td
+    - if !dynamic_list(@product.shelves_freezer).nil?
+      ul
+        - dynamic_list(@product.shelves_freezer).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Drawers (Freezer)
+  td
+    - if !dynamic_list(@product.drawers_freezer).nil?
+      ul
+        - dynamic_list(@product.drawers_freezer).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Door Shelves (Freezer)
+  td
+    - if !dynamic_list(@product.door_shelves_freezer).nil?
+      ul
+        - dynamic_list(@product.door_shelves_freezer).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Defrost
+  td = @product.defrost
+
+tr
+  th Feature List
+  td
+    - if !dynamic_list(@product.feature_list).nil?
+      ul
+        - dynamic_list(@product.feature_list).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Performance
+  td = @product.performance
+tr
+  th Energy Consumption
+  td = @product.energy_consumption
+tr
+  th Star Rating
+  td = @product.star_rating
+tr
+  th Noise
+  td = @product.noise
+tr
+  th Weight
+  td = @product.weight

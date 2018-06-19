@@ -1,0 +1,7 @@
+en:
+  options:
+    aesthetics:
+      classic:   "Classic"
+      portofino: "Portofino"
+      linear:    "Linear"
+      victoria:  "Victoria"

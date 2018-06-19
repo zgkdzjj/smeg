@@ -1,0 +1,152 @@
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Description
+  td = @product.description_2
+tr
+  th Capacity (HOB)
+  td
+    - if !dynamic_list(@product.capacity_hob).nil?
+      ul
+        - dynamic_list(@product.capacity_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Barbecue
+  td = @product.barbecue
+
+tr
+  th Gas Input
+  td = @product.gas_input
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Supplied Accessories (HOB)
+  td
+    - if !dynamic_list(@product.supplied_accessories_hob).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Capacity (Main Oven)
+  td
+    - if !dynamic_list(@product.capacity_main_oven).nil?
+      ul
+        - dynamic_list(@product.capacity_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+  th Capacity (Aux Oven)
+  td
+    - if !dynamic_list(@product.capacity_aux_oven).nil?
+      ul
+        - dynamic_list(@product.capacity_aux_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Total Functions (Main Oven)
+  td
+    - if !dynamic_list(@product.total_functions_main_oven).nil?
+      ul
+        - dynamic_list(@product.total_functions_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+  th Total Functions (Aux Oven)
+  td
+    - if !dynamic_list(@product.total_functions_aux_oven).nil?
+      ul
+        - dynamic_list(@product.total_functions_aux_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Cooking Levels (Main Oven)
+  td = @product.cooking_levels_main_oven
+  th Cooking Levels (Aux Oven)
+  td = @product.cooking_levels_aux_oven
+
+tr
+  th Thermostat (Main Oven)
+  td = @product.thermostat_main_oven
+  th Thermostat (Aux Oven)
+  td = @product.thermostat_aux_oven
+
+tr
+  th Programmability (Main Oven)
+  td
+    - if !dynamic_list(@product.programmability_main_oven).nil?
+      ul
+        - dynamic_list(@product.programmability_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Programmability (Aux Oven)
+  td
+    - if !dynamic_list(@product.programmability_aux_oven).nil?
+      ul
+        - dynamic_list(@product.programmability_aux_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Cleaning (Main Oven)
+  td = @product.cleaning_main_oven
+  th Cleaning (Aux Oven)
+  td = @product.cleaning_aux_oven
+
+tr
+  th Lighting (Main Oven)
+  td = @product.lighting_main_oven
+  th Lighting (Aux Oven)
+  td = @product.lighting_aux_oven
+
+tr
+  th Safety (Main Oven)
+  td = @product.safety_main_oven
+  th Safety (Aux Oven)
+  td = @product.safety_aux_oven
+
+tr
+  th Supplied Accessories (Main Oven)
+  td
+    - if !dynamic_list(@product.supplied_accessories_main_oven).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Supplied Accessories (Aux Oven)
+  td
+    - if !dynamic_list(@product.supplied_accessories_aux_oven).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_aux_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Function List(Main Oven)
+  td
+    - if !dynamic_list(@product.function_list_main_oven).nil?
+      ul
+        - @product.function_list_main_oven.reject { |x| x.empty? }.each do |function|
+          li
+            => image_tag(function_icon(function))
+            =< I18n.t("options.function_list.#{function}")
+tr
+  th Function List(Aux Oven)
+  td
+    - if !dynamic_list(@product.function_list_aux_oven).nil?
+      ul
+        - @product.function_list_aux_oven.reject { |x| x.empty? }.each do |function|
+          li
+            => image_tag(function_icon(function))
+            =< I18n.t("options.function_list.#{function}")
+
+
+
+
+
+

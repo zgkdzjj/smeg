@@ -1,0 +1,40 @@
+.container
+  .row
+    .col-xs-6
+      h1 Features
+    .col-xs-2.col-xs-offset-4
+      = link_to "+ Add Feature", new_feature_path, class: 'btn btn-success btn-xs pull-right'
+  br
+  .row
+    = form_tag(features_path, method: :get) do
+      .col-xs-4
+        = text_field_tag :search_features, nil, placeholder: "Search features ...", class: "form-control"
+      / .col-xs-4
+      /   = select_tag :by_feature_type, options_for_select(Options::Products::Types.select_form), prompt: 'All Feature Types', class: "form-control"
+
+      = submit_tag "", style: "display: none;"
+  br
+  table.table
+    tr
+      th Name
+      / th Type
+      th Short Description
+      th Long Description
+      th style='min-width:300px;'
+
+    - for feature in @features
+      tr
+        td= feature.name
+        / td= I18n.t(feature.feature_type, scope: [:options, :product_types])
+        td= feature.short_description
+        td= feature.long_description
+        td
+          .btn-group.pull-right
+            = link_to feature_path(feature), class: 'btn btn-default btn-xs' do
+              i.fa.fa-eye
+            = link_to edit_feature_path(feature), class: 'btn btn-default btn-xs' do
+              i.fa.fa-pencil
+            = link_to feature_path(feature), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-default btn-xs' do
+              i.fa.fa-trash-o
+
+  = paginate @features

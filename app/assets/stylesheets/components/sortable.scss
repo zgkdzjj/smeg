@@ -1,0 +1,30 @@
+ol.sortable-animated {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+
+  .anchor {
+    position: relative;
+    top: 20px;
+    left: 10px;
+  }
+
+  li {
+
+  }
+
+  li.nested-fields.sortable .form-group {
+    margin-top: 10px;
+  }
+
+  .btn-nested-remove {
+    top: 0px;
+  }
+
+  li.placeholder {
+    height: 35px;
+    border: 2px dashed lightgrey;
+    margin: 5px;
+    padding: 10px;
+  }
+}

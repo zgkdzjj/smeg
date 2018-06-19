@@ -1,0 +1,36 @@
+.container
+  .row
+    .col-xs-6
+      h1 Products
+  br
+  .row
+    = form_tag(products_path, method: :get) do
+      .col-xs-4
+        = text_field_tag :search_products, nil, placeholder: "Search products ...", class: "form-control"
+
+      = submit_tag "", style: "display: none;"
+  br
+  table.table
+    tr
+      th Model #
+      th Range
+      th Price
+      th Description
+      th style='width:300px;'
+
+    - for product in @products
+      tr
+        td= product.model_number
+        td= I18n.t product.type, scope: [:options, :product_types]
+        th= number_to_currency(product.price)
+        td= product.description
+        th
+          .btn-group.pull-right
+            = link_to product_path(product), class: 'btn btn-default btn-xs' do
+              i.fa.fa-eye
+            = link_to edit_product_path(product), class: 'btn btn-default btn-xs' do
+              i.fa.fa-pencil
+            = link_to product_path(product), method: :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-default btn-xs' do
+              i.fa.fa-trash-o
+
+  = paginate @products

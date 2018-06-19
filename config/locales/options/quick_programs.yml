@@ -1,0 +1,8 @@
+en:
+  options:
+    quick_program_list:
+      rapid_27:        "Rapid 27"
+      normal_quick:    "Normal Quick"
+      eco_quick:       "Eco Quick"
+      daily_quick:     "Daily Quick"
+      strong_and_fast: "Strong and Fast"

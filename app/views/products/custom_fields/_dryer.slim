@@ -1,0 +1,41 @@
+.row
+  .col-xs-6
+    = f.input :device_display
+  .col-xs-6
+    = f.input :size
+.row
+  .col-xs-6
+    = f.input :drum_construction
+  .col-xs-6
+    = f.input :capacity, collection: dynamic_list(@product.capacity), label: "Capacity", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :door
+
+.row
+  .col-xs-6
+    = f.input :programs_list, collection: Options::Programs::Types.select_form, label: "Choose Programs", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :function_list, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :auxiliary_list, collection: dynamic_list(@product.auxiliary_list), label: "Auxiliary List", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :feature_list, collection: dynamic_list(@product.feature_list), label: "Feature List", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :spin_speed
+  .col-xs-6
+    = f.input :water_rating
+.row
+  .col-xs-6
+    = f.input :energy_rating
+  .col-xs-6
+    = f.input :electrical_input
+.row
+  .col-xs-6
+    = f.input :total_current

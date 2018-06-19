@@ -1,0 +1,54 @@
+.nav-pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.pagination {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  li a {
+    border: 0;
+    color: $periwinkle;
+    padding: 3px 14px;
+    margin: 5px;
+    line-height: 200%;
+    &:hover {
+      box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+      background: none;
+      border-radius: 5px;
+    }
+    small {
+      color: $charcoal;
+    }
+    &[aria-label="Previous"] {
+      padding-left: 0;
+    }
+    &[aria-label="Next"] {
+      padding-right: 0;
+    }
+  }
+  li.active > a {
+    background: none;
+    color: $darkblue;
+    text-decoration: underline;
+    &:hover {
+      background: none;
+      color: $darkblue;
+    }
+  }
+  li.disabled {
+    opacity: 0.2;
+  }
+  .fa {
+    color: $darkblue;
+    font-size: 200%;
+    line-height: 100%;
+    vertical-align: middle;
+    &.fa-angle-left {
+      margin-right: 15px;
+    }
+    &.fa-angle-right {
+      margin-left: 15px;
+    }
+  }
+}

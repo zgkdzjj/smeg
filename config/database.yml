@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+
+development:
+  <<: *default
+  database: smeg_development
+
+test:
+  <<: *default
+  <% if ENV["CI"] %>
+  database: smeg_test_<%= ENV["BUILDKITE_JOB_ID"] %>
+  <% else %>
+  database: smeg_test
+  <% end %>
+
+production:
+  <<: *default
+  database: smeg_production
+  username: <%= ENV['SMEG_DATABASE_USERNAME'] %>
+  password: <%= ENV['SMEG_DATABASE_PASSWORD'] %>

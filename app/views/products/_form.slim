@@ -1,0 +1,92 @@
+h3 Product #{@product.model_number}
+= I18n.t "#{@product.type}", scope: [:options, :product_types]
+br
+
+- if @product.cover_image.present?
+  .form-group
+  p Current Cover Image
+  = image_tag @product.cover_image.thumb.url, class: 'image-rounded'
+
+.row
+  .col-xs-12
+    = f.input :cover_image, as: :file, label: "Cover Picture"
+    = f.input :cover_image_cache, as: :hidden
+
+.row
+  .col-xs-6
+    = f.input :price, as: :string
+
+.row
+  .col-xs-6
+    = f.input :description, as: :string
+  .col-xs-6
+    = f.input :aesthetic, as: :select, collection: Options::Aesthetics.select_form
+
+.row
+  .col-xs-12
+    h3 Features
+    #product_features
+      = f.association :features, collection: Feature.all, label: "Choose features", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :dimensions, as: :string
+  .col-xs-6
+    = f.input :supplied_accessories, collection: supplied_accessories(@product), label: "Supplied Accessories", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :optional_accessories, collection: optional_accessories(@product), label: "Optional Accessories", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+= render "products/custom_fields/#{f.object.type.underscore}", f: f
+
+.row
+  .col-xs-6
+    = f.input :finish, collection: dynamic_list(@product.finish), label: "Finish", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :safety, collection: dynamic_list(@product.safety), label: "Safety", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :power, as: :string
+
+.row
+  .col-xs-6
+    = f.input :notes
+
+.row
+  .col-xs-6
+    = f.input :warranty
+  .col-xs-6
+    = f.input :status, as: :radio_buttons, collection: [['Active', true], ['Inactive', false]]
+
+br
+hr
+.row
+  .col-xs-12
+    h3 Schematic Images
+    .row
+      = f.simple_fields_for :schematic_attachments do |schematic|
+        .col-xs-12.col-md-3
+          = render 'schematic_attachment_fields', f: schematic
+    .links
+      = link_to_add_association '+ add schematic', f, :schematic_attachments, class: 'btn btn-success'
+br
+hr
+.row
+  .col-xs-12
+    h3 Product Images
+    .row
+      = f.simple_fields_for :image_attachments do |image|
+        .col-xs-12.col-md-3
+          = render 'image_attachment_fields', f: image
+    .links
+      = link_to_add_association '+ add image', f, :image_attachments, class: 'btn btn-success'
+br
+hr
+.row
+  .col-xs-6
+    h3 Documents
+    = f.simple_fields_for :file_attachments do |file|
+      = render 'file_attachment_fields', f: file
+    .links
+      = link_to_add_association '+ add document', f, :file_attachments, class: 'btn btn-success'

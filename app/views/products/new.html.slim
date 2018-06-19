@@ -1,0 +1,12 @@
+.container style='padding-bottom: 80px;'
+  .row
+    .col-xs-12
+      h1 Create Product
+
+  .row
+    .col-xs-12
+      = simple_form_for @product do |f|
+        = render partial: 'form', locals: { f: f }
+
+        .bottom.bottom-full
+          = f.submit 'Create', class: 'btn btn-primary'

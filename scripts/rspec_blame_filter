@@ -1,0 +1,33 @@
+#!/usr/bin/ruby
+
+# Setup:
+#
+#    gem install colorize
+#
+# Usage:
+#
+#    bin/rspec | scripts/rspec_blame_filter
+#
+# or:
+#
+#    scripts/rspec_blame_filter
+#
+# and paste rspec output, ^D to quit.
+#
+
+gem 'colorize'
+require 'colorize'
+
+ARGF.each_line do |line|
+  if m = line.match(/rspec (.*?\.rb):(\d+)/)
+    path, num = m.captures
+    cmd = "git blame --date short -e -M -w -L #{num},#{num} -- #{path}"
+    out = `#{cmd}`
+    print line.strip
+    print ' '
+    print out.strip.white.on_red
+    puts
+  else
+    print line
+  end
+end

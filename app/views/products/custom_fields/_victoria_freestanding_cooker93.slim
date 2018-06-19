@@ -1,0 +1,42 @@
+.row
+  .col-xs-6
+    = f.input :total_functions
+  .col-xs-6
+    = f.input :device_display
+.row
+  .col-xs-6
+    = f.input :function_list, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :gas_hob
+  .col-xs-6
+    = f.input :capacity
+.row
+  .col-xs-6
+    = f.input :gas_input
+  .col-xs-6
+    = f.input :main_oven
+.row
+  .col-xs-6
+    = f.input :electric_hob
+  .col-xs-6
+    = f.input :door_glass
+.row
+  .col-xs-6
+    = f.input :cooking_levels
+  .col-xs-6
+    = f.input :supplied_accessories_main_oven, collection: dynamic_list(@product.supplied_accessories_main_oven), label: "Supplied Accessories (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :thermostat
+  .col-xs-6
+    = f.input :installation
+.row
+  .col-xs-6
+    = f.input :programmability, collection: dynamic_list(@product.programmability), label: "Programmability", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :cleaning
+.row
+  .col-xs-6
+    = f.input :lighting

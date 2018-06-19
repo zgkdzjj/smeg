@@ -1,0 +1,38 @@
+.row
+  .col-xs-6
+    = f.input :device_display
+  .col-xs-6
+    = f.input :cavity_type
+.row
+  .col-xs-6
+    = f.input :turntable
+  .col-xs-6
+    = f.input :power_levels
+.row
+  .col-xs-6
+    = f.input :microwave_power
+  .col-xs-6
+    = f.input :grill_power
+.row
+  .col-xs-6
+    = f.input :capacity, collection: dynamic_list(@product.capacity), label: "Capacity", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :convection_power
+  .col-xs-6
+    = f.input :auto_cook_functions
+.row
+  .col-xs-6
+    = f.input :other_functions, collection: dynamic_list(@product.other_functions), label: "Other Functions", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :defrost
+.row
+  .col-xs-6
+    = f.input :lighting
+  .col-xs-6
+    = f.input :control_panel
+.row
+  .col-xs-6
+    = f.input :clock
+  .col-xs-6
+    = f.input :timer

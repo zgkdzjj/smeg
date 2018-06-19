@@ -1,0 +1,81 @@
+.navbar-default {
+  .indexcity {
+    z-index: 9999;
+    &.navbar-toggle .icon-bar {
+      background: white;
+    }
+  }
+}
+
+.slide-right {
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.navbar-link {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  background: asset-url('phone.png') no-repeat;
+}
+
+.navbar > .container-fluid .navbar-brand.menu-navbar-brand {
+  float: none;
+  margin: 30px 0 30px 25px;
+  display: block;
+  background-image: asset-url('georgie-logo.png');
+}
+
+.navbar-default .navbar-toggle {
+  left: 15px;
+  &:hover, &:focus {
+    background: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding-top: 40px;
+    background-color: $periwinkle;
+    position: fixed;
+    top: 0;
+    transition:all 0.2s ease-out;
+    height: 100vh;
+    width: 85%;
+    right: 0%;
+    left: -100%;
+    margin: 0;
+    max-height: inherit !important;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    .navbar-nav {
+      margin: 10px;
+      &> li > a {
+        color: white;
+        &:hover, &:focus {
+          color: $mint;
+        }
+      }
+    }
+    .btn-line-pink {
+      border-color: white;
+      color: white;
+      margin-left: 15px;
+      &:hover {
+        background: $white;
+        color: $periwinkle;
+        border-color: white;
+      }
+    }
+  }
+  .navbar-default  .navbar-nav > li.active {
+    &> a, &> a:hover {
+      background: #506AE0;
+      color: $mint;
+      border-radius: 4px;
+    }
+  } 
+}

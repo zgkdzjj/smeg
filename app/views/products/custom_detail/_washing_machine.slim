@@ -1,0 +1,58 @@
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Size
+  td = @product.size
+tr
+  th Drum Construction
+  td = @product.drum_construction
+tr
+  th Capacity
+  td = @product.capacity
+tr
+  th Door
+  td = @product.door
+
+tr
+  th Programs List
+  td
+    - if !dynamic_list(@product.programs_list).nil?
+      ul
+        - dynamic_list(@product.programs_list).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Feature List
+  td
+    - if !dynamic_list(@product.feature_list).nil?
+      ul
+        - dynamic_list(@product.feature_list).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Auxiliary List
+  td
+    - if !dynamic_list(@product.auxiliary_list).nil?
+      ul
+        - dynamic_list(@product.auxiliary_list).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Spin Speed
+  td = @product.spin_speed
+
+tr
+  th Water Rating
+  td = @product.water_rating
+tr
+  th Energy Rating
+  td = @product.energy_rating
+
+tr
+  th Electrical Input
+  td = @product.electrical_input
+
+tr
+  th Total Current
+  td = @product.total_current

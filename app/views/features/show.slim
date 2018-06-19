@@ -1,0 +1,25 @@
+.container
+  h3 #{@feature.name}
+  .btn-group.pull-right
+    = link_to edit_feature_path(@feature), class: 'btn btn-default btn-xs' do
+      i.fa.fa-pencil
+
+  br
+  br
+  br
+
+  table.table
+    tr
+      th Name
+      td = @feature.name
+    / tr
+    /   th Category
+    /   td = @feature.feature_type
+
+    tr
+      th Short Description
+      td = @feature.short_description
+
+    tr
+      th Long Description
+      td = @feature.long_description

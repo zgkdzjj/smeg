@@ -1,0 +1,18 @@
+echo '--- Add staging heroku branch'
+git remote add staging https://git.heroku.com/staging-fshd.git
+
+echo '--- Checkout master branch and update'
+git checkout develop
+git pull
+
+echo '--- Running staging deploy - git push staging develop --force'
+git push staging develop:master --force
+
+echo '--- Running migrations'
+heroku run rake db:migrate --app staging-fshd
+
+echo '--- Restarting dynos'
+heroku restart --app staging-fshd
+
+echo '--- Hitting website to start dyno'
+curl https://staging-fshd.herokuapp.com/

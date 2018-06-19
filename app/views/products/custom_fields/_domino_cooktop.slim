@@ -1,0 +1,13 @@
+.row
+  .col-xs-6
+    = f.input :installation
+  .col-xs-6
+    = f.input :capacity, collection: dynamic_list(@product.capacity), label: "Capacity", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :temperature_control
+  .col-xs-6
+    = f.input :gas_connection
+.row
+  .col-xs-6
+    = f.input :cutout, collection: dynamic_list(@product.cutout), label: "Cutout", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }

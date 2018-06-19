@@ -1,0 +1,25 @@
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Capacity
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Temperature Control
+  td = @product.temperature_control
+tr
+  th Gas Connection
+  td = @product.gas_connection
+tr
+  th Cutout
+  td
+    - if !dynamic_list(@product.cutout).nil?
+      ul
+        - dynamic_list(@product.cutout).each do |accessory|
+          li
+            =< "#{accessory}"

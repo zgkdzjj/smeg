@@ -1,0 +1,26 @@
+tr
+  th Fascia
+  td = @product.fascia
+tr
+  th Drawer
+  td = @product.drawer
+tr
+  th Capacity
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Power Supply
+  td = @product.power_supply
+tr
+  th Temperature
+  td = @product.temperature
+tr
+  th Timer
+  td = @product.timer

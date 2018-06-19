@@ -1,0 +1,106 @@
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 30px;
+  small {
+    font-weight: 400;
+    display: block;
+    text-transform: lowercase;
+    font-size: 90%;
+    line-height: 110%;
+  }
+  &.btn-pink {
+    background: $lightblue;
+    color: white;
+    &:hover, &:focus {
+      background: $darkblue;
+      opacity: 1;
+    }
+  }
+  &.btn-white {
+    background: white;
+    color: $lightblue;
+  }
+  &.btn-peri {
+    background: $periwinkle;
+    color: white;
+    &:hover, &:focus {
+      background: $dark-purple;
+    }
+  }
+  &.btn-line-pink {
+    background: none;
+    border: 1px solid $lightblue;
+    color: $lightblue;
+    &:hover, &:focus {
+      border-color: $darkblue;
+      color: $darkblue;
+    }
+  }
+  &.btn-line-white {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    &:hover, &:focus {
+      background: white;
+      color: $periwinkle;
+    }
+  }
+}
+
+.btn-margin {
+  margin-top: 20px;
+}
+.btn-block label {
+  margin-left: -12px;
+  text-transform: none;
+}
+
+.btn-block input[type="radio"] {
+  opacity: 0;
+}
+.btn-block.active {
+  background-color: #3D4A8A;
+  &:hover, &:focus {
+    outline: none;
+  }
+}
+.btn.btn-peri.btn-stack.btn-block.btn-margin.active {
+  outline: none;
+}
+#button1 label{
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: $lightblue;
+}
+#button1.active {
+  background-color: white;
+}
+.list-tags {
+  .tag {
+    margin-bottom: 8px;
+  }
+  .tag a {
+    border: 1px solid $periwinkle;
+    border-radius: 20px;
+    color: $periwinkle;
+    padding: 1px 8px;
+    &:hover, &:focus {
+      text-decoration: none;
+      background: $periwinkle;
+      color: white;
+    }
+  }
+}
+
+.btn-tiny {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+
+.btn-nested-remove {
+  padding: 5px 10px;
+  position: relative;
+  top: 30px;
+}

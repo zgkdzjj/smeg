@@ -1,0 +1,55 @@
+tr
+  th Total Functions
+  td = @product.total_functions
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Gas HOB
+  td = @product.gas_hob
+tr
+  th Capacity
+  td = @product.capacity
+tr
+  th Gas Input
+  td = @product.gas_input
+tr
+  th Main Oven
+  td = @product.main_oven
+tr
+  th Electric HOB
+  td = @product.electric_hob
+tr
+  th Door Glass
+  td = @product.door_glass
+tr
+  th Cooking Levels
+  td = @product.cooking_levels
+tr
+  th Supplied Accessories (Main Oven)
+  td
+    - if !dynamic_list(@product.supplied_accessories_main_oven).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Thermostat
+  td = @product.thermostat
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Programmability
+  td
+    - if !dynamic_list(@product.programmability).nil?
+      ul
+        - dynamic_list(@product.programmability).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cleaning
+  td = @product.cleaning
+tr
+  th Lighting
+  td = @product.lighting

@@ -1,0 +1,22 @@
+nav.navbar.navbar-default.navbar-fixed-top.navbar-main
+  .container
+    - if user_signed_in?
+      ul.nav.navbar-nav
+        li=link_to "Dashboard", root_url
+        li=link_to "Products", :products
+        li=link_to "Features", :features
+
+      ul.nav.navbar-nav.navbar-right.topnav
+        / li
+        /   a href="#"  Link
+        li.dropdown
+          a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+            | Actions
+            span.caret
+          ul.dropdown-menu
+            / li
+            /   a href="#"  Another action
+            / li
+            /   a href="#"  Something else here
+            li.divider role="separator"
+            li=link_to "Logout", logout_path

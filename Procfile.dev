@@ -1,0 +1,3 @@
+web: bundle exec puma -C config/puma.rb
+client: sh -c './bin/webpack-dev-server'
+rails: tail -f log/development.log

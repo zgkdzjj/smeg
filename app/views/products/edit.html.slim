@@ -1,0 +1,14 @@
+.container style='padding-bottom: 80px;'
+  .row
+    .col-xs-12
+      h1 Edit Product
+
+  .row
+    .col-xs-12
+      = simple_form_for @product, as: :product, url: product_path(@product) do |f|
+        = render partial: 'form', locals: { f: f }
+        .bottom.bottom-full
+          => f.submit 'Update', class: 'btn btn-primary'
+          =< link_to "Cancel", :back, class: 'btn btn-default'
+
+

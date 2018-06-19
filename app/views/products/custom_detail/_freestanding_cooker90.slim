@@ -1,0 +1,114 @@
+tr
+  th Description
+  td = @product.description_2
+tr
+  th Device Display
+  td = @product.device_display
+
+tr
+  th Capacity (GAS HOB)
+  td
+    - if !dynamic_list(@product.capacity_gas_hob).nil?
+      ul
+        - dynamic_list(@product.capacity_gas_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Gas Input
+  td = @product.gas_input
+
+tr
+  th Safety (GAS HOB)
+  td
+    - if !dynamic_list(@product.safety_gas_hob).nil?
+      ul
+        - dynamic_list(@product.safety_gas_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Supplied Accessories (GAS HOB)
+  td
+    - if !dynamic_list(@product.supplied_accessories_gas_hob).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_gas_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Capacity (ELECTRIC HOB)
+  td
+    - if !dynamic_list(@product.capacity_electric_hob).nil?
+      ul
+        - dynamic_list(@product.capacity_electric_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Safety (ELECTRIC HOB)
+  td
+    - if !dynamic_list(@product.safety_electric_hob).nil?
+      ul
+        - dynamic_list(@product.safety_electric_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Supplied Accessories (ELECTRIC HOB)
+  td
+    - if !dynamic_list(@product.supplied_accessories_electric_hob).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_electric_hob).each do |accessory|
+          li
+            =< "#{accessory}"
+
+tr
+  th Capacity (Main Oven)
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Total Functions
+  td = @product.total_functions
+
+tr
+  th Door Glass
+  td = @product.door_glass
+
+tr
+  th Cooking Levels
+  td = @product.cooking_levels
+
+tr
+  th Supplied Accessories (Main Oven)
+  td
+    - if !dynamic_list(@product.supplied_accessories_main_oven).nil?
+      ul
+        - dynamic_list(@product.supplied_accessories_main_oven).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Thermostat
+  td = @product.thermostat
+tr
+  th Installation
+  td = @product.installation
+
+tr
+  th Programmability
+  td
+    - if !dynamic_list(@product.programmability).nil?
+      ul
+        - dynamic_list(@product.programmability).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cleaning
+  td = @product.cleaning
+tr
+  th Lighting
+  td = @product.lighting

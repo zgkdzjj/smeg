@@ -1,0 +1,95 @@
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Capacity
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Programmability
+  td
+    - if !dynamic_list(@product.programmability).nil?
+      ul
+        - dynamic_list(@product.programmability).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Size
+  td = @product.size
+tr
+  th End of Cycle Indicator
+  td = @product.end_of_cycle_indicator
+tr
+  th Baskets
+  td = @product.baskets
+tr
+  th Wash System
+  td
+    - if !dynamic_list(@product.wash_system).nil?
+      ul
+        - dynamic_list(@product.wash_system).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Water Softener
+  td = @product.water_softener
+tr
+  th Temperatures
+  td = @product.temperatures
+tr
+  th Feature List
+  td
+    - if !dynamic_list(@product.feature_list).nil?
+      ul
+        - dynamic_list(@product.feature_list).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Water Connection
+  td = @product.water_connection
+tr
+  th Timer
+  td = @product.timer
+tr
+  th Filtration
+  td = @product.filtration
+tr
+  th Drying
+  td = @product.drying
+tr
+  th Noise
+  td = @product.noise
+tr
+  th Energy Usage
+  td = @product.energy_usage
+tr
+  th Energy Rating
+  td = @product.energy_rating
+tr
+  th Water Usage
+  td = @product.water_usage
+tr
+  th Water Rating
+  td = @product.water_rating
+tr
+  th Programs List
+  td
+    - if !dynamic_list(@product.programs_list).nil?
+      ul
+        - dynamic_list(@product.programs_list).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Quick Programs List
+  td
+    - if !dynamic_list(@product.quick_programs_list).nil?
+      ul
+        - dynamic_list(@product.quick_programs_list).each do |accessory|
+          li
+            =< "#{accessory}"
+
+

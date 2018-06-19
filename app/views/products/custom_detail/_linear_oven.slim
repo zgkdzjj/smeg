@@ -1,0 +1,46 @@
+tr
+  th Total Functions
+  td
+    - if !dynamic_list(@product.total_functions).nil?
+      ul
+        - dynamic_list(@product.total_functions).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Auto Menus
+  td = @product.auto_menus
+tr
+  th Device Display
+  td = @product.device_display
+tr
+  th Capacity
+  td
+    - if !dynamic_list(@product.capacity).nil?
+      ul
+        - dynamic_list(@product.capacity).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cooking Levels
+  td = @product.cooking_levels
+tr
+  th Thermostat
+  td = @product.thermostat
+tr
+  th Installation
+  td = @product.installation
+tr
+  th Programmability
+  td
+    - if !dynamic_list(@product.programmability).nil?
+      ul
+        - dynamic_list(@product.programmability).each do |accessory|
+          li
+            =< "#{accessory}"
+tr
+  th Cleaning
+  td = @product.cleaning
+tr
+  th Lighting
+  td = @product.lighting
+

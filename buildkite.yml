@@ -1,0 +1,9 @@
+steps:
+  - label: ':hammer: Run Specs'
+    command: 'scripts/buildkite.sh'
+
+  - wait: ~
+    continue_on_failure: true
+
+  - label: ':codeclimate: Push results to codeclimate'
+    command: 'scripts/codeclimate.sh'

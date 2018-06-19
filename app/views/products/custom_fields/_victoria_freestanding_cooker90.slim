@@ -1,0 +1,106 @@
+.row
+  .col-xs-6
+    = f.input :installation_cooker
+  .col-xs-6
+    = f.input :device_display
+.row
+  .col-xs-6
+    = f.input :gas_hob
+  .col-xs-6
+    = f.input :capacity_cooker
+.row
+  .col-xs-6
+    = f.input :gas_input
+  .col-xs-6
+    = f.input :safety_cooker
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_cooker, collection: dynamic_list(@product.supplied_accessories_cooker), label: "Supplied Accessories (Cooker)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+
+.row
+  .col-xs-6
+    = f.input :lower_left_main_oven
+  .col-xs-6
+    = f.input :aux_oven_right
+
+.row
+  .col-xs-6
+    = f.input :capacity_main_oven
+  .col-xs-6
+    = f.input :capacity_oven_right
+
+.row
+  .col-xs-6
+    = f.input :function_list, collection: Options::Functions::Types.select_form, label: "Choose Functions", input_html: { data: { toggle: 'multi-select2-fixed' }, multiple: true }
+  .col-xs-6
+    = f.input :total_functions_main_oven
+  .col-xs-6
+    = f.input :total_functions_oven_right
+
+.row
+  .col-xs-6
+    = f.input :door_main_oven
+  .col-xs-6
+    = f.input :door_oven_right
+
+.row
+  .col-xs-6
+    = f.input :door_glass_main_oven
+  .col-xs-6
+    = f.input :cooking_levels_main_oven
+.row
+  .col-xs-6
+    = f.input :cooking_levels_oven_right
+  .col-xs-6
+    = f.input :thermostat_main_oven
+.row
+  .col-xs-6
+    = f.input :thermostat_oven_right
+  .col-xs-6
+    = f.input :programmability_main_oven, collection: dynamic_list(@product.programmability_main_oven), label: "Programmability (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :programmability_oven_right, collection: dynamic_list(@product.programmability_oven_right), label: "Programmability (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :cleaning_main_oven
+.row
+  .col-xs-6
+    = f.input :cleaning_oven_right
+  .col-xs-6
+    = f.input :lighting_main_oven
+.row
+  .col-xs-6
+    = f.input :lighting_oven_right
+  .col-xs-6
+    = f.input :safety_oven_right
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_main_oven, collection: dynamic_list(@product.supplied_accessories_main_oven), label: "Supplied Accessories (Main Oven)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+  .col-xs-6
+    = f.input :supplied_accessories_oven_right, collection: dynamic_list(@product.supplied_accessories_oven_right), label: "Supplied Accessories (Oven Right)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :grill
+  .col-xs-6
+    = f.input :capacity_grill
+.row
+  .col-xs-6
+    = f.input :total_functions_grill
+  .col-xs-6
+    = f.input :cooking_levels_grill
+.row
+  .col-xs-6
+    = f.input :thermostat_grill
+  .col-xs-6
+    = f.input :programmability_grill, collection: dynamic_list(@product.programmability_grill), label: "Programmability (Grill)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
+.row
+  .col-xs-6
+    = f.input :cleaning_grill
+  .col-xs-6
+    = f.input :lighting_grill
+.row
+  .col-xs-6
+    = f.input :safety_grill
+.row
+  .col-xs-6
+    = f.input :supplied_accessories_grill, collection: dynamic_list(@product.supplied_accessories_grill), label: "Supplied Accessories (Grill)", input_html: { data: { toggle: 'multi-select2-accessories' }, multiple: true }
