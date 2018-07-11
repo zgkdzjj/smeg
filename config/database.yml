@@ -13,12 +13,12 @@ development:
 
 test:
   <<: *default
- <% if ENV["CI"] %>
- database: smeg_test_<%= ENV["BUILDKITE_JOB_ID"] %>
- <% else %>
- database: smeg_test
- <% end %>
- database: smeg_test
+  <% if ENV["CI"] %>
+  database: smeg_test_<%= ENV["BUILDKITE_JOB_ID"] %>
+  <% else %>
+  database: smeg_test
+  <% end %>
+  database: smeg_test
   
 
 production:
