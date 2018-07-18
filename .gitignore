@@ -1,3 +1,4 @@
+/config/local_env.yml
 *.rbc
 capybara-*.html
 .rspec
@@ -17,6 +18,14 @@ capybara-*.html
 /public/pdf/images/products/*.tif
 /public/pdf/images/products/*.jpg
 /public/pdf/images/products/*.png
+/public/pdf/images/products/
+
+/files/magesheet/
+/files/products_test/
+/files/products_useless/
+/files/transposed/
+
+
 
 .byebug_history
 .DS_Store
